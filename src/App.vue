@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import PageView from "./views/index.vue";
+import ChatView from "./views/ChatView.vue";
 </script>
 
 <template>
   <div>
-    <p>Redirect TO</p>
-    <PageView />
+    <!-- <PageView /> -->
+    <ChatView />
   </div>
 </template>
 
