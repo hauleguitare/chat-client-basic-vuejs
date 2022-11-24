@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { useBreakPoints } from "@/utils/useBreakPoints";
-</script>
-
 <template>
   <div id="chat-view-wrapper">
     <slot></slot>
