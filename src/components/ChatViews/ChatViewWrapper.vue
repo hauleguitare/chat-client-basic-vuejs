@@ -6,6 +6,7 @@
 <style scoped lang="scss">
 #chat-view-wrapper {
   --widthSidebar: 19.5rem;
+  --maxHeightHeaderChatView: 66px;
   @apply flex container;
 }
 </style>
