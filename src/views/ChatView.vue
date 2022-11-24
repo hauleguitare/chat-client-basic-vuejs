@@ -10,3 +10,5 @@ import ContentMessage from "@/components/ChatViews/ContentMessage.vue";
     <ContentMessage />
   </ChatViewWrapper>
 </template>
+
+<style scoped></style>
