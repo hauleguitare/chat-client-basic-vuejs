@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { useBreakPoints } from "@/utils/useBreakPoints";
+</script>
+
 <template>
   <div id="chat-view-wrapper">
     <slot></slot>
@@ -5,6 +9,7 @@
 </template>
 <style scoped lang="scss">
 #chat-view-wrapper {
-  @apply flex;
+  --widthSidebar: 19.5rem;
+  @apply flex container;
 }
 </style>

@@ -18,8 +18,8 @@ import SearchIcon from "@/components/icons/SearchIcon.vue";
   }
 }
 .dark-theme {
-  @apply bg-black;
-  @apply text-white;
+  @apply bg-stone-700;
+  @apply text-white/80;
 }
 
 .light-theme {
