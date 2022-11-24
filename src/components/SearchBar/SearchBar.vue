@@ -1,8 +1,5 @@
-<script setup lang="ts">
-import SearchIcon from "@/components/icons/SearchIcon.vue";
-</script>
 <template>
-  <div class="search-bar-group light-theme">
+  <div class="search-bar-group">
     <input type="text" placeholder="search anything..." />
     <button type="button" @click="$event.preventDefault()">
       <SearchIcon />
@@ -13,6 +10,7 @@ import SearchIcon from "@/components/icons/SearchIcon.vue";
 .search-bar-group {
   @apply flex rounded-full items-center overflow-hidden;
   @apply px-2 py-1;
+  @apply dark:bg-stone-600 bg-white dark:text-dark-theme-text-surface text-black;
   input {
     @apply outline-none;
     @apply px-2 py-1;
@@ -20,13 +18,8 @@ import SearchIcon from "@/components/icons/SearchIcon.vue";
     @apply flex-grow;
   }
 }
-.dark-theme {
-  @apply bg-stone-700;
-  @apply text-white/80;
-}
-
-.light-theme {
-  @apply bg-white;
-  @apply text-black;
-}
 </style>
+
+<script setup lang="ts">
+import SearchIcon from "@/components/icons/SearchIcon.vue";
+</script>

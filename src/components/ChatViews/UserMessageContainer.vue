@@ -1,10 +1,3 @@
-<script setup lang="ts">
-import Avatar from "../Account/Avatar.vue";
-import type { IUser } from "./SidebarMessage.vue";
-
-export interface IUserMessageProps extends IUser {}
-const props = defineProps<{ users: IUserMessageProps[] }>();
-</script>
 <template>
   <div class="user-message-wrapper">
     <div v-for="user of props.users" :key="user.username" class="user-message">
@@ -29,20 +22,28 @@ const props = defineProps<{ users: IUserMessageProps[] }>();
   .user-message {
     @apply flex flex-row;
     @apply items-center;
-    @apply py-2 px-2;
+    @apply py-4 px-2;
 
     .user-message--information {
       @apply flex-col flex-grow overflow-hidden;
       @apply px-2;
+      @apply dark:text-dark-theme-text-surface;
 
       .user-message__username {
-        @apply text-base;
+        @apply text-base truncate;
       }
 
       .user-message__message-review {
-        @apply text-white/80 truncate;
+        @apply text-sm truncate dark:text-dark-theme-text-surface/50;
       }
     }
   }
 }
 </style>
+<script setup lang="ts">
+import Avatar from "../Account/Avatar.vue";
+import type { IUser } from "./SidebarMessage.vue";
+
+export interface IUserMessageProps extends IUser {}
+const props = defineProps<{ users: IUserMessageProps[] }>();
+</script>
