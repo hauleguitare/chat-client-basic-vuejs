@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<IAvatarProps>(), { size: "32px", src: Ava
 
 <style scoped lang="scss">
 .box-avatar-wrapper {
-  @apply overflow-hidden inline-block rounded-full;
+  @apply overflow-hidden inline-block rounded-full flex-shrink-0;
   .avatar-image {
     @apply w-full h-full object-cover;
   }
