@@ -2,9 +2,11 @@
 import SearchIcon from "@/components/icons/SearchIcon.vue";
 </script>
 <template>
-  <div class="search-bar-group dark-theme">
+  <div class="search-bar-group light-theme">
     <input type="text" placeholder="search anything..." />
-    <SearchIcon />
+    <button type="button" @click="$event.preventDefault()">
+      <SearchIcon />
+    </button>
   </div>
 </template>
 <style scoped lang="scss">
@@ -15,6 +17,7 @@ import SearchIcon from "@/components/icons/SearchIcon.vue";
     @apply outline-none;
     @apply px-2 py-1;
     @apply bg-transparent;
+    @apply flex-grow;
   }
 }
 .dark-theme {
