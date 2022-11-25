@@ -17,7 +17,7 @@
 .user-message-wrapper {
   @apply flex flex-col;
   @apply mt-4;
-  @apply border-t-2;
+  @apply border-t-2 border-dark-theme-surface;
 
   .user-message {
     @apply flex flex-row;
@@ -41,7 +41,7 @@
 }
 </style>
 <script setup lang="ts">
-import Avatar from "../Account/Avatar.vue";
+import Avatar from "../../Account/Avatar.vue";
 import type { IUser } from "./SidebarMessage.vue";
 
 export interface IUserMessageProps extends IUser {}
