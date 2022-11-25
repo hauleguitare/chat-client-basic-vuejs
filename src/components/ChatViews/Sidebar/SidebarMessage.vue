@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar-message-wrapper" :class="[width <= 1024 ? 'view-mobile' : 'view-desktop']">
-    <HeaderSideBarContainer />
+    <HeaderSideBar />
     <div class="search-bar-wrapper">
       <SearchBar />
     </div>
@@ -32,8 +32,8 @@ export interface IUser {
   username: string;
 }
 
-import SearchBar from "../SearchBar/SearchBar.vue";
-import HeaderSideBarContainer from "./HeaderSidebarContainer.vue";
+import SearchBar from "../../SearchBar/SearchBar.vue";
+import HeaderSideBar from "./HeaderSidebar.vue";
 import { useBreakPoints } from "@/utils/useBreakPoints";
 import UserMessageContainer from "./UserMessageContainer.vue";
 
