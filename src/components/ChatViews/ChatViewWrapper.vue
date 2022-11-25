@@ -7,6 +7,7 @@
 #chat-view-wrapper {
   --widthSidebar: 19.5rem;
   --maxHeightHeaderChatView: 66px;
+  --heightMessagebar: 55px;
   @apply flex container;
 }
 </style>
