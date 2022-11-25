@@ -14,6 +14,6 @@
 }
 </style>
 <script setup lang="ts">
-import Avatar from "../Account/Avatar.vue";
-import AccountInformation from "../Account/AccountInformation.vue";
+import Avatar from "../../Account/Avatar.vue";
+import AccountInformation from "../../Account/AccountInformation.vue";
 </script>
