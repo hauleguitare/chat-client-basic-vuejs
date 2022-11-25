@@ -1,5 +1,5 @@
 <template>
-  <div class="content__message-box-container">
+  <div class="content__message-box-wrapper">
     <BubbleMessage msg="Hello" type="receive" />
     <BubbleMessage msg="Hi" type="sent" />
     <BubbleMessage msg="How are you" type="sent" />
@@ -24,7 +24,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.content__message-box-container {
+.content__message-box-wrapper {
   @apply flex-grow;
   @apply max-h-[calc(100vh_-_(var(--maxHeightHeaderChatView)_+_var(--heightMessagebar)))];
   @apply overflow-y-auto overscroll-y-contain overflow-x-hidden;

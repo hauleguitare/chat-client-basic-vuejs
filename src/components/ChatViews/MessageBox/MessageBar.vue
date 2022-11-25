@@ -1,5 +1,5 @@
 <template>
-  <div class="message-bar-wrapper">
+  <div class="message-bar_message-box-wrapper">
     <div class="message-bar--input-wrapper">
       <input placeholder="Send message..." />
     </div>
@@ -9,7 +9,7 @@
   </div>
 </template>
 <style scoped lang="scss">
-.message-bar-wrapper {
+.message-bar_message-box-wrapper {
   @apply flex-grow-0;
   @apply flex flex-row;
   @apply w-full h-[var(--heightMessagebar)];
