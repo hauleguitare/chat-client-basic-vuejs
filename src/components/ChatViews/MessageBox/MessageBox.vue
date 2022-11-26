@@ -1,8 +1,8 @@
 <template>
   <div class="message-box-wrapper">
     <Header />
-    <Content />
-    <MessageBar />
+    <Content :dataMessage="messages" />
+    <MessageBar @on-send-message="handleOnMessage" />
   </div>
 </template>
 <style scoped lang="scss">
@@ -18,4 +18,11 @@
 import Header from "./HeaderMessageBox.vue";
 import Content from "./ContentMessageBox.vue";
 import MessageBar from "./MessageBar.vue";
+import { ref } from "vue";
+
+const messages = ref<string[]>([]);
+
+const handleOnMessage = (data_message: string) => {
+  messages.value.push(data_message);
+};
 </script>
