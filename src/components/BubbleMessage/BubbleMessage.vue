@@ -4,7 +4,7 @@
     :class="isReceived ? 'message--received-to' : 'message--sent-to'"
   >
     <div class="bubble-message" :class="isReceived ? 'received-from' : 'sent-to'">
-      <p>{{ props.msg }}</p>
+      <span>{{ props.msg }}</span>
     </div>
   </div>
 </template>
@@ -13,9 +13,10 @@
   @apply px-4 py-4;
   @apply flex;
   .bubble-message {
-    @apply inline-flex rounded-lg;
+    @apply inline-block rounded-lg;
     @apply px-2 py-2;
     @apply max-w-[calc(var(--maxWidthMessageBox)_/_2)];
+    @apply break-words;
   }
   .received-from {
     @apply dark:bg-dark-theme-on-surface dark:text-dark-theme-text-surface;
@@ -23,7 +24,7 @@
 
   .sent-to {
     @apply dark:bg-dark-theme-primary dark:text-white;
-    @apply justify-end;
+    @apply justify-start;
   }
 }
 .message--sent-to {
