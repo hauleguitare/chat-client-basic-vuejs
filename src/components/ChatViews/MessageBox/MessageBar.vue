@@ -1,9 +1,14 @@
 <template>
   <div class="message-bar_message-box-wrapper">
     <div class="message-bar--input-wrapper">
-      <input placeholder="Send message..." />
+      <input
+        ref="inputRef"
+        placeholder="Send message..."
+        @keypress.enter="onMessage"
+        v-model="messageInput"
+      />
     </div>
-    <button class="sender-icon--button">
+    <button type="button" class="sender-icon--button">
       <SenderIcon class="sender-icon" />
     </button>
   </div>
@@ -40,4 +45,30 @@
 </style>
 <script setup lang="ts">
 import SenderIcon from "@/components/icons/SenderIcon.vue";
+import { ref, onMounted } from "vue";
+import { EventEnum } from "@/enums/event.enum";
+
+interface InputEvent extends Event {
+  target: HTMLInputElement;
+}
+//declare type for state reactive
+type IMessageInput = typeof inputRef.value;
+
+// declare emit
+const emit = defineEmits([EventEnum.ON_SEND_MESSAGE]);
+
+// Ref, state
+const inputRef = ref();
+const messageInput = ref("");
+
+//handle event
+const onMessage = () => {
+  if (!messageInput.value) {
+    return;
+  }
+  emit(EventEnum.ON_SEND_MESSAGE, messageInput.value);
+  messageInput.value = "";
+};
+
+onMounted(() => inputRef.value.focus());
 </script>
