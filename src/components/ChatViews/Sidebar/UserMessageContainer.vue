@@ -1,6 +1,6 @@
 <template>
   <div class="user-message-wrapper">
-    <div v-for="user of props.users" :key="user.username" class="user-message">
+    <a href="#" v-for="user of props.users" :key="user.username" class="user-message">
       <Avatar :src="user.photoURL" size="46px" />
       <div class="user-message--information">
         <p class="user-message__username">{{ user.username }}</p>
@@ -10,7 +10,7 @@
           molestias vitae sed error eos. Voluptate...
         </p>
       </div>
-    </div>
+    </a>
   </div>
 </template>
 <style lang="scss">
@@ -23,6 +23,7 @@
     @apply flex flex-row;
     @apply items-center;
     @apply py-4 px-2;
+    @apply hover:bg-stone-600 transition-colors duration-150;
 
     .user-message--information {
       @apply flex-col flex-grow overflow-hidden;
