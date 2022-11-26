@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+#app {
+  --widthSidebar: 19.5rem;
+  --maxHeightHeaderChatView: 66px;
+  --heightMessagebar: 55px;
+  --maxWidthMessageBox: 1224px;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 100vh;
   @apply bg-dark-theme-background;
+  @apply rounded-full;
 }
 
 ::-webkit-scrollbar-thumb {
